@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+}
+
+td {
+    min-height: 30px;
+}
+
+/* Container of the three areas of the CV, personal info, experience and education */
+.container {
+    width: 100%;
+    position: relative;
+}
+
+/* Container of the personal info area */
+.personalInfoContainer {
+    background: linear-gradient(to bottom right, #88BBEE , #1166DD); /* Standard syntax */
+    background: -moz-linear-gradient(bottom right, #88BBEE, #1166DD); /* For Firefox 3.6 to 15 */
+    border-top: 2px solid #4444BB;
+    border-bottom: 2px solid #4444BB;
+}
+
+/* Container of the experience area */
+.experienceContainer {
+    background: linear-gradient(to bottom right, #DDDDDD, #777777); /* Standard syntax */
+    background: -moz-linear-gradient(bottom right, #DDDDDD, #777777); /* For Firefox 3.6 to 15 */
+    border-top: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+}
+
+/* Container of the education area */
+.educationContainer {
+    background: linear-gradient(to bottom right, #AADD77, #558833); /* Standard syntax */
+    background: -moz-linear-gradient(bottom right, #AADD77, #558833); /* For Firefox 3.6 to 15 */
+    border-top: 2px solid #227722;
+    border-bottom: 2px solid #227722;
+}
+
+/* Every container with information. First it's hidden, but after clicking in the title, it's shown */
+.dataContainer {
+    margin: 50px 0 0 10px;
+
+    font-family: "Arial";
+    font-size: 14px;
+    line-height: 2;
+
+    display: none;
+}
+
+.personalInfoContainer .dataContainer {width: 75%;} /* The  width of the personal info data container is smaller */
+
+/* Div with standard setting to show the information, like margins, opacity, etc. */
+.information {
+    position: relative;
+    width: 80%;
+    max-width: 980px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Blue title of every area of the CV */
+.blueTitle {
+    width: 50%;
+    border-bottom: 1px solid #88BBEE;
+
+    font-family: "Century Gothic", "Myriad Pro", "Arial";
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    color: #88BBEE;
+
+    cursor: pointer;
+}
+
+/* Image features */
+.userImage {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+.userImage img {height: 100px;} /* Size of the image */
+
+/* Style for every personal info label */
+.label {
+    float: left;
+    width: 20%;
+    text-align: right;
+
+    font-weight: bold;
+}
+
+/* Style for every personal info value */
+.value {
+    float: right;
+    width: 75%;
+    text-align: left;
+
+    font-style: italic;
+}
+
+/* Each head cell of the tables */
+.cvTable th {
+    border: 1px solid #FFF;
+    padding: 2px;
+    font-family: "Arial";
+    font-size: 10px;
+}
+
+/* Each body cell of the tables */
+.cvTable td {
+    border-bottom: 1px solid #FFF;
+    padding: 2px;
+    font-family: "Arial";
+    font-size: 10px;
+    color: #333333;
+}
+
+/* Each row will have a cell with a delete icon */
+.removeRow {
+    background: url("../img/remove_icon.png") no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.removeButton {height:30px;} /* Height of the remove button cell */
+.removeColumn {display: none;} /* Doesn't show the remove column if the user is not logged in */
+
+/* Features of the login dialog */
+.loginPopup {
+    width: 500px;
+    height: 300px;
+    display: none;
+}
+
+/* Style of every button of the CV */
+.button {
+    width: 100px;
+    margin: 20px auto;
+    height: 25px;
+
+    color: white;
+    font-family: "Arial";
+    font-size: 13px;
+    text-align: center;
+    padding-top: 8px;
+
+    background: #AAAAAA;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Specific features for the Add Row Button */
+.addButton {
+    position: absolute;
+    top: 10px;
+    left: 290px;
+}
+
+/* Specific features for the Save Row Button */
+.saveButton {
+    position: absolute;
+    top: 10px;
+    left: 407px;
+}
+
+.center {text-align: center;} /* Center alignment of a div or cell */
+.hidden {display: none;}      /* Div or cell hidden in the beginning */
+.clear {clear:both;}          /* To set an uniform height where to keep showing the CV */
